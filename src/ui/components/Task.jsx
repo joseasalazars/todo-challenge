@@ -23,6 +23,7 @@ const Task = (props) => (
                 <input
                   style={{ marginRight: 15 }}
                   onChange={() => props.addDoneTask(props.task)}
+                  checked={false}
                   type="checkbox"
                   value={props.task}
                 />

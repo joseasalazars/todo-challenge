@@ -27,7 +27,7 @@ const TaskList = (props) => (
                 <i>
                   {props.done
                     ? "No tasks have been done this week."
-                    : "No tasks for this week."}
+                    : "No new tasks for this week."}
                 </i>
               )}
             </ul>
