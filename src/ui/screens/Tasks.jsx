@@ -8,7 +8,6 @@ function Tasks() {
   const [doneTasks, setDones] = useState([]);
 
   useEffect(() => {
-    console.log("HEY");
     var todoList =
       localStorage.getItem("toDoTasks") !== null
         ? JSON.parse(localStorage.getItem("toDoTasks"))
