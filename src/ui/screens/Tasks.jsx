@@ -1,33 +1,26 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import TaskList from "../components/TaskList";
+import NewTask from "../components/NewTask";
 
 const toDoTasks = [];
 const doneTasks = [];
 
 function Tasks() {
-  const [toDoTasks, setTodos] = useState(["Learn Hooks"]);
-  const [doneTasks, setDones] = useState(["Learn Hooks"]);
+  const [toDoTasks, setTodos] = useState(["Learn Hooks", "l", "lo"]);
+  const [doneTasks, setDones] = useState(["Learn Hooks", "l", "lo"]);
+
+  const addTask = (value) => {
+    setTodos([...toDoTasks, value]);
+  };
 
   return (
     <Container>
-      <div className="form-group">
-        <h1>
-          To-Do <small>List</small>
-        </h1>
-        <form role="form">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="New Task"
-            name="task"
-          />
-        </form>
-        <button type="button" className="btn btn btn-primary">
-          Add
-        </button>
+      <div className="task-container">
+        <h1>To-Do List</h1>
+        <NewTask addTask={addTask} />
       </div>
-      <div></div>
+
       <ul className="list-unstyled" id="todo"></ul>
 
       <TaskList title={"To Do Task List"} tasks={toDoTasks} done={false} />

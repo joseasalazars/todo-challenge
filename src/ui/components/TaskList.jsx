@@ -1,8 +1,6 @@
 import React from "react";
 import Task from "./Task";
 
-const tasks = [];
-
 const TaskList = (props) => (
   <div className="row d-flex justify-content-center container task-container">
     <div className="col-md-8">
@@ -18,7 +16,7 @@ const TaskList = (props) => (
             <ul className=" list-group list-group-flush">
               {props.tasks.length > 0 ? (
                 props.tasks.map((task, index) => (
-                  <Task task={task} key={index} />
+                  <Task task={task} key={index} done={props.done} />
                 ))
               ) : (
                 <i>

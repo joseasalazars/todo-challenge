@@ -25,29 +25,8 @@ body {
   background-color: #6200ea;
 }
 
-form {
-  display: inline-block;
-}
-.form-group {
-  text-align: center;
-  padding-bottom: 25px;
-}
-
-#todo {
-  margin: 0 auto;
-  width: 500px;
-}
-
-a.close {
-  float: right;
-}
-
-i {
-  font-style: italic;
-}
-
 .task-container {
-  margin-top: 100px;
+  margin-top: 70px;
 }
 
 .card {
