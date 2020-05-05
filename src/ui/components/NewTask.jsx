@@ -26,7 +26,7 @@ function NewTask(props) {
           className="btn btn btn-primary"
           onClick={() => addNewTask(document.getElementById("newTask").value)}
         >
-          Add
+          Save
         </button>
       </Col>
     </Row>

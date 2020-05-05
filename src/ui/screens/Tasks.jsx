@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import TaskList from "../components/TaskList";
 import NewTask from "../components/NewTask";
-
-const toDoTasks = [];
-const doneTasks = [];
 
 function Tasks() {
   const [toDoTasks, setTodos] = useState(["Learn Hooks", "l", "lo"]);
@@ -70,8 +67,6 @@ function Tasks() {
         <h1>To-Do List</h1>
         <NewTask addTask={addTask} />
       </div>
-
-      <ul className="list-unstyled" id="todo"></ul>
 
       <TaskList
         title={"To Do Task List"}
