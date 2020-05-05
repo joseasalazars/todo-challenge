@@ -8,10 +8,14 @@ const doneTasks = [];
 
 function Tasks() {
   const [toDoTasks, setTodos] = useState(["Learn Hooks", "l", "lo"]);
-  const [doneTasks, setDones] = useState(["Learn Hooks", "l", "lo"]);
+  const [doneTasks, setDones] = useState([]);
 
   const addTask = (value) => {
     setTodos([...toDoTasks, value]);
+  };
+
+  const addDoneTask = (value) => {
+    setDones([...doneTasks, value]);
   };
 
   return (
@@ -23,7 +27,12 @@ function Tasks() {
 
       <ul className="list-unstyled" id="todo"></ul>
 
-      <TaskList title={"To Do Task List"} tasks={toDoTasks} done={false} />
+      <TaskList
+        title={"To Do Task List"}
+        tasks={toDoTasks}
+        done={false}
+        addDoneTask={addDoneTask}
+      />
       <TaskList title={"Done List"} tasks={doneTasks} done={true} />
     </Container>
   );

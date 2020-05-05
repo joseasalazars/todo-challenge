@@ -16,7 +16,12 @@ const TaskList = (props) => (
             <ul className=" list-group list-group-flush">
               {props.tasks.length > 0 ? (
                 props.tasks.map((task, index) => (
-                  <Task task={task} key={index} done={props.done} />
+                  <Task
+                    task={task}
+                    key={index}
+                    done={props.done}
+                    addDoneTask={props.addDoneTask}
+                  />
                 ))
               ) : (
                 <i>

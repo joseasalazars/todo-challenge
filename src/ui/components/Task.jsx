@@ -6,17 +6,29 @@ const Task = (props) => (
       <div className="widget-content-wrapper">
         <div className="widget-content-left mr-2">
           <div className="">
-            <label>
-              <input
-                style={{ marginRight: 15 }}
-                onChange={() => console.log()}
-                checked={props.done}
-                disable={props.done.toString()}
-                type="checkbox"
-                value={props.task}
-              />
-              {props.task}
-            </label>
+            {props.done ? (
+              <label>
+                <input
+                  style={{ marginRight: 15 }}
+                  readOnly
+                  checked={props.done}
+                  disable={props.done.toString()}
+                  type="checkbox"
+                  value={props.task}
+                />
+                {props.task}
+              </label>
+            ) : (
+              <label>
+                <input
+                  style={{ marginRight: 15 }}
+                  onChange={() => props.addDoneTask(props.task)}
+                  type="checkbox"
+                  value={props.task}
+                />
+                {props.task}
+              </label>
+            )}
           </div>
         </div>
       </div>
